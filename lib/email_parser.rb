@@ -12,8 +12,7 @@ class EmailParser
   end
 
   def parse
-    @list_of_emails.split(/\,|\ /)
-    binding.pry
+    @list_of_emails.split(/\,\s|\s|\,/).uniq
   end
 
 end
