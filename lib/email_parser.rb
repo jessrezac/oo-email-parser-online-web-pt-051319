@@ -7,6 +7,10 @@ require 'pry'
 class EmailParser
   attr_accessor :list_of_emails
 
+  def initialize(emails)
+    @list_of_emails = emails
+  end
+
   def parse
     @list_of_emails.split(/\,|\ /)
     binding.pry
